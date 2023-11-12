@@ -1,6 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 import Keyboard from "./components/Keyboard.jsx";
 
@@ -33,12 +32,43 @@ function App() {
     "b",
     "n",
     "m",
+    " ",
+  ];
+
+  const hebrew = [
+    "ק",
+    "ר",
+    "א",
+    "ט",
+    "ו",
+    "ן",
+    "ם",
+    "פ",
+    "ש",
+    "ד",
+    "ג",
+    "כ",
+    "ע",
+    "י",
+    "ח",
+    "ל",
+    "ך",
+    "ף",
+    "ז",
+    "ס",
+    "ב",
+    "ה",
+    "נ",
+    "מ",
+    "צ",
+    "ת",
+    "ץ",
   ];
   const [language, setLanguage] = useState(english);
 
   return (
     <>
-      <Keyboard onClick={setText} language={language} />
+      <Keyboard onClick={setText} text={text} language={language} />
     </>
   );
 }
