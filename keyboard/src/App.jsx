@@ -3,6 +3,9 @@ import Screen from "./components/Screen.jsx";
 import "./App.css";
 import Keyboard from "./components/Keyboard.jsx";
 import Language from "./components/Language.jsx";
+import Color from "./components/Color.jsx";
+
+const propertys = { color: "black", fontSize: 18, fontFamily: "ariel" };
 
 function App() {
   const [text, setText] = useState([]);
@@ -68,7 +71,7 @@ function App() {
   ];
 
   const [language, setLanguage] = useState(english);
-  const propertys = { color: "red", fontSize: 12, fontFamily: "ariel" };
+  // const [count, setCount] = useState(0);
 
   function handleLanguage(selectedLanguage) {
     setLanguage(selectedLanguage);
@@ -87,6 +90,7 @@ function App() {
         onLanguageChange={handleLanguage}
         languages={{ english, hebrew }}
       />
+      <Color propertys={propertys} />
     </>
   );
 }

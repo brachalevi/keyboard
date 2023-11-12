@@ -1,9 +1,8 @@
-import React from "react";
-import { useState } from "react";
+// import React from "react";
+// import { useState } from "react";
 import Char from "./Char";
 
 function Screen({ text }) {
-  console.log(text);
   return (
     <div>
       {text.map((item, key) => (
