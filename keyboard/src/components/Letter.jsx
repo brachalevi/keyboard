@@ -1,6 +1,6 @@
 function Letter(props) {
   function handleClick(letter, propertys) {
-    props.onClick((prev) => {
+    props.setText((prev) => {
       return [
         ...prev,
         {

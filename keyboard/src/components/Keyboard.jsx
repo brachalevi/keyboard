@@ -6,7 +6,7 @@ function Keyboard(props) {
       {props.language.map((item, key) => (
         <Letter
           text={props.text}
-          onClick={props.setText}
+          setText={props.setText}
           key={key}
           letter={item}
           propertys={props.propertys}
