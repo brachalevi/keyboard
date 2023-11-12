@@ -1,6 +1,6 @@
 function Letter(props) {
   function handleClick(letter) {
-    props.onClick((prev, letter) => [...prev, props.letter]);
+    props.onClick((prev, letter) => [...prev, { value: props.letter }]);
     console.log("text: ", props.text);
   }
   return (
