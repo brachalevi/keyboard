@@ -2,6 +2,7 @@ import { useState } from "react";
 import Screen from "./components/Screen.jsx";
 import "./App.css";
 import Keyboard from "./components/Keyboard.jsx";
+import Language from "./components/Language.jsx";
 
 function App() {
   const [text, setText] = useState([]);
@@ -63,9 +64,16 @@ function App() {
     "צ",
     "ת",
     "ץ",
+    " ",
   ];
+
   const [language, setLanguage] = useState(english);
   const propertys = { color: "red", fontSize: 12, fontFamily: "ariel" };
+
+  function handleLanguage(selectedLanguage) {
+    setLanguage(selectedLanguage);
+  }
+
   return (
     <>
       <Screen text={text} />
@@ -74,6 +82,10 @@ function App() {
         onClick={setText}
         text={text}
         language={language}
+      />
+      <Language
+        onLanguageChange={handleLanguage}
+        languages={{ english, hebrew }}
       />
     </>
   );
