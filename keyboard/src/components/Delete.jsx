@@ -8,3 +8,4 @@ function Delete({ setText }) {
   return <button onClick={delet}>delete</button>;
 }
 export default Delete;
+//

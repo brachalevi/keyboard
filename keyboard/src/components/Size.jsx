@@ -8,3 +8,4 @@ function Size({ propertys }) {
   );
 }
 export default Size;
+//
