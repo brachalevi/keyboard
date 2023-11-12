@@ -4,6 +4,11 @@ import "./App.css";
 import Keyboard from "./components/Keyboard.jsx";
 import Language from "./components/Language.jsx";
 import Size from "./components/Size.jsx";
+import Color from "./components/Color.jsx";
+import Font from "./components/Font.jsx";
+import Clear from "./components/Clear.jsx";
+
+const propertys = { color: "black", fontSize: 18, fontFamily: "ariel" };
 
 function App() {
   const [text, setText] = useState([]);
@@ -69,7 +74,6 @@ function App() {
   ];
 
   const [language, setLanguage] = useState(english);
-  const propertys = { color: "red", fontSize: 16, fontFamily: "ariel" };
 
   function handleLanguage(selectedLanguage) {
     setLanguage(selectedLanguage);
@@ -91,6 +95,10 @@ function App() {
       <br></br>
       <br></br>
       <Size propertys={propertys} />
+      <Color propertys={propertys} />
+      <Font propertys={propertys} />
+      <br></br>
+      <Clear />
     </>
   );
 }
