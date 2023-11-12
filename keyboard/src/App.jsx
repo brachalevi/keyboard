@@ -40,7 +40,7 @@ function App() {
     "b",
     "n",
     "m",
-    " ",
+    "   ",
   ];
 
   const hebrew = [
@@ -71,7 +71,7 @@ function App() {
     "צ",
     "ת",
     "ץ",
-    " ",
+    "   ",
   ];
 
   const [language, setLanguage] = useState(english);
@@ -85,7 +85,7 @@ function App() {
       <Screen text={text} />
       <Keyboard
         propertys={propertys}
-        onClick={setText}
+        setText={setText}
         text={text}
         language={language}
       />
@@ -96,8 +96,11 @@ function App() {
       <br></br>
       <br></br>
       <Size propertys={propertys} />
+      <br></br>
       <Color propertys={propertys} />
+      <br></br>
       <Font propertys={propertys} />
+      <br></br>
       <br></br>
       <Clear setText={setText} />
     </>

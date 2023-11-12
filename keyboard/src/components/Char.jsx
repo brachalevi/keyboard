@@ -6,7 +6,7 @@ function Char({ item }) {
       className="charScreen"
       style={{
         color: item.color,
-        fontFamily: item.fontFamily,
+        fonprevtFamily: item.fontFamily,
         fontSize: item.fontSize,
         display: "inline",
       }}

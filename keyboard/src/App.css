@@ -42,3 +42,13 @@
 }
 #keyboard{width:50%;
 margin:auto}
+
+#screen{border-radius: 1%;
+border: black 1px solid;
+margin: auto;
+margin-bottom: 10px;
+padding: 5px;
+width:50%;
+overflow:visible;
+}
+

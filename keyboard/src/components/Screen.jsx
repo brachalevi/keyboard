@@ -4,7 +4,7 @@ import Char from "./Char";
 
 function Screen({ text }) {
   return (
-    <div>
+    <div id="screen">
       {text.map((item, key) => (
         <Char key={key} item={item} />
       ))}
