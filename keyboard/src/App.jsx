@@ -7,6 +7,7 @@ import Size from "./components/Size.jsx";
 import Color from "./components/Color.jsx";
 import Font from "./components/Font.jsx";
 import Clear from "./components/Clear.jsx";
+import All from "./components/All.jsx";
 
 const propertys = { color: "black", fontSize: 18, fontFamily: "ariel" };
 
@@ -103,6 +104,7 @@ function App() {
       <br></br>
       <br></br>
       <Clear setText={setText} />
+      <All propertys={propertys} />
     </>
   );
 }
