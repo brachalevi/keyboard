@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Screen from "./components/Screen.jsx";
 import "./App.css";
 import Keyboard from "./components/Keyboard.jsx";
 
@@ -65,10 +65,16 @@ function App() {
     "ץ",
   ];
   const [language, setLanguage] = useState(english);
-
+  const propertys = { color: "red", fontSize: 12, fontFamily: "ariel" };
   return (
     <>
-      <Keyboard onClick={setText} text={text} language={language} />
+      <Screen text={text} />
+      <Keyboard
+        propertys={propertys}
+        onClick={setText}
+        text={text}
+        language={language}
+      />
     </>
   );
 }

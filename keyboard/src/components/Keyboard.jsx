@@ -8,6 +8,7 @@ function Keyboard(props) {
           onClick={props.onClick}
           key={key}
           letter={item}
+          propertys={props.propertys}
         />
       ))}
     </div>
