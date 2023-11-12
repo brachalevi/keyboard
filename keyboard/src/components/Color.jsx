@@ -1,9 +1,12 @@
-function Color(props) {
+function Color({ propertys }) {
+  const colors = ["black", "green", "pink", "blue", "yellow", "orange"];
   return (
     <div id="color">
-      <button onClick={() => (props.propertys.color = "green")}>green</button>
-      <button onClick={() => (props.propertys.color = "pink")}>pink</button>
-      <button onClick={() => (props.propertys.color = "black")}>black</button>
+      {colors.map((color, key) => (
+        <button key={key} onClick={() => (propertys.color = color)}>
+          {color}
+        </button>
+      ))}
     </div>
   );
 }
