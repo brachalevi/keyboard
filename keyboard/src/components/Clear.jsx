@@ -1,4 +1,5 @@
-function Clear(props) {
-  return <button onClick={() => (props.text = [])}>clear all</button>;
+function Clear({ setText }) {
+  const clearText = () => setText([]);
+  return <button onClick={clearText}>clear all</button>;
 }
 export default Clear;

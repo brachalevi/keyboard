@@ -12,6 +12,7 @@ const propertys = { color: "black", fontSize: 18, fontFamily: "ariel" };
 
 function App() {
   const [text, setText] = useState([]);
+
   const english = [
     "q",
     "w",
@@ -98,7 +99,7 @@ function App() {
       <Color propertys={propertys} />
       <Font propertys={propertys} />
       <br></br>
-      <Clear />
+      <Clear setText={setText} />
     </>
   );
 }
