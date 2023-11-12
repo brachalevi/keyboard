@@ -1,6 +1,8 @@
 function Char({ item }) {
   return (
     <div
+      onMouseDown={() => console.log("hi")}
+      onMouseUp={() => console.log("bye")}
       className="charScreen"
       style={{
         color: item.color,
