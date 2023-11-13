@@ -1,8 +1,9 @@
 function All({ propertys, setText }) {
   function selectAll() {
     setText((prev) => {
+      const newProprty = { ...propertys[propertys.length - 1] };
       const selected = prev.map((value, index) => {
-        return { char: value.char, ...propertys };
+        return { char: value.char, ...newProprty };
       });
       return selected;
     });
