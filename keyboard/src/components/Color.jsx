@@ -4,16 +4,15 @@ function Color({ propertys }) {
     const newProprty = { ...propertys[propertys.length - 1] };
     newProprty.color = color;
     propertys.push(newProprty);
-    console.log("prop", propertys);
   }
   return (
-    <div id="color">
+    <section id="color">
       {colors.map((color, key) => (
         <button key={key} onClick={() => handelClick(color)}>
           {color}
         </button>
       ))}
-    </div>
+    </section>
   );
 }
 export default Color;

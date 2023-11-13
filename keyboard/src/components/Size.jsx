@@ -4,16 +4,15 @@ function Size({ propertys }) {
     const newProprty = { ...propertys[propertys.length - 1] };
     newProprty.fontSize = size;
     propertys.push(newProprty);
-    console.log("prop", propertys);
   }
   return (
-    <>
+    <section>
       {sizes.map((size, key) => (
         <button key={key} onClick={() => handlelSize(size)}>
           {size}
         </button>
       ))}
-    </>
+    </section>
   );
 }
 export default Size;
