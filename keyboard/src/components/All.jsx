@@ -1,15 +1,18 @@
 function All({ propertys, setText }) {
-  function selectAll({ propertys }) {
+  function selectAll() {
     setText((prev) => {
-      const selected = [...prev];
-selected.map((value,index)=>{...value, propertys[propertys.length]})
-
+      const selected = prev.map((value, index) => {
+        return { char: value.char, ...propertys };
+      });
+      return selected;
     });
   }
+
   return (
     <>
-      <button>all</button>
+      <button onClick={selectAll}>all</button>
     </>
   );
 }
+
 export default All;

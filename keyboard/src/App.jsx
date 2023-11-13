@@ -104,7 +104,7 @@ function App() {
       <br></br>
       <br></br>
       <Clear setText={setText} />
-      <All propertys={propertys} />
+      <All propertys={propertys} setText={setText} />
     </>
   );
 }
