@@ -4,7 +4,6 @@ function Size({ propertys }) {
     const newProprty = { ...propertys[propertys.length - 1] };
     newProprty.fontSize = size;
     propertys.push(newProprty);
-    console.log("prop", propertys);
   }
   return (
     <>

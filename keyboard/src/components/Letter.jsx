@@ -1,12 +1,6 @@
 function Letter(props) {
   function handleClick(letter, propertys) {
     props.setText((prev) => {
-      console.log("hi", {
-        fontFamily: propertys[propertys.length - 1].fontFamily,
-        fontSize: propertys[propertys.length - 1].fontSize,
-        color: propertys[propertys.length - 1].color,
-        char: letter,
-      });
       return [
         ...prev,
         {
