@@ -1,9 +1,18 @@
 function Size({ propertys }) {
+  const sizes = [16, 24, 32];
+  function handlelSize(size) {
+    const newProprty = { ...propertys[propertys.length - 1] };
+    newProprty.fontSize = size;
+    propertys.push(newProprty);
+    console.log("prop", propertys);
+  }
   return (
     <>
-      <button onClick={() => (propertys.fontSize = 16)}>16</button>
-      <button onClick={() => (propertys.fontSize = 18)}>18</button>
-      <button onClick={() => (propertys.fontSize = 20)}>20</button>
+      {sizes.map((size, key) => (
+        <button key={key} onClick={() => handlelSize(size)}>
+          {size}
+        </button>
+      ))}
     </>
   );
 }

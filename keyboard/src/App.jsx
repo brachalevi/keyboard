@@ -8,8 +8,9 @@ import Color from "./components/Color.jsx";
 import Font from "./components/Font.jsx";
 import Clear from "./components/Clear.jsx";
 import All from "./components/All.jsx";
+import UnDo from "./components/UnDo.jsx";
 
-const propertys = { color: "black", fontSize: 18, fontFamily: "ariel" };
+const propertys = [{ color: "black", fontSize: 18, fontFamily: "ariel" }];
 
 function App() {
   const [text, setText] = useState([]);
@@ -98,13 +99,14 @@ function App() {
       <br></br>
       <Size propertys={propertys} />
       <br></br>
-      <Color propertys={propertys} />
+      <Color propertys={propertys[propertys.length - 1]} />
       <br></br>
-      <Font propertys={propertys} />
+      {/* <Font propertys={propertys[propertys.length - 1]} />
       <br></br>
       <br></br>
       <Clear setText={setText} />
-      <All propertys={propertys} setText={setText} />
+      <All propertys={propertys[propertys.length - 1]} setText={setText} />
+      <UnDo propertys={propertys} /> */}
     </>
   );
 }
