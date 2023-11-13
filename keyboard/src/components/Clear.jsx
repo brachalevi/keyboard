@@ -1,4 +1,4 @@
-function Clear({ setText, propertys }) {
+function Clear({ setText }) {
   const clearText = () => {
     return setText([]);
   };
