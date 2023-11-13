@@ -99,14 +99,14 @@ function App() {
       <br></br>
       <Size propertys={propertys} />
       <br></br>
-      <Color propertys={propertys[propertys.length - 1]} />
+      <Color propertys={propertys} />
       <br></br>
-      {/* <Font propertys={propertys[propertys.length - 1]} />
+      {/* <Font propertys={propertys[propertys.length - 1]} /> */}
       <br></br>
       <br></br>
-      <Clear setText={setText} />
-      <All propertys={propertys[propertys.length - 1]} setText={setText} />
-      <UnDo propertys={propertys} /> */}
+      <Clear propertys={propertys} setText={setText} />
+      {/* <All propertys={propertys[propertys.length - 1]} setText={setText} /> */}
+      <UnDo propertys={propertys} />
     </>
   );
 }

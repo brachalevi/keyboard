@@ -1,6 +1,9 @@
 function UnDo({ propertys }) {
   function unDo() {
-    propertys.pop();
+    console.log("now2", propertys);
+    if (propertys.length > 1) {
+      propertys.pop();
+    }
   }
 
   return <button onClick={unDo}>UnDO</button>;
