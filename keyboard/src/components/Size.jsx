@@ -6,13 +6,13 @@ function Size({ propertys }) {
     propertys.push(newProprty);
   }
   return (
-    <>
+    <section>
       {sizes.map((size, key) => (
         <button key={key} onClick={() => handlelSize(size)}>
           {size}
         </button>
       ))}
-    </>
+    </section>
   );
 }
 export default Size;

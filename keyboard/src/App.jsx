@@ -81,6 +81,21 @@ function App() {
         setLanguage(selectedLanguage);
     }
 
+  return (
+    <>
+      <Screen text={text} />
+      <Keyboard
+        propertys={propertys}
+        setText={setText}
+        text={text}
+        language={language}
+      />
+      <Language
+        onLanguageChange={handleLanguage}
+        languages={{ english, hebrew }}
+      />
+
+      <Size propertys={propertys} />
     return (
         <>
             <Screen text={text} />
@@ -91,22 +106,22 @@ function App() {
             <Size propertys={propertys} />
             <br></br>
 
-            <br></br>
-            <Font propertys={propertys} />
-            <br></br>
-            <br></br>
+      <br></br>
+      <Font propertys={propertys} />
+      <br></br>
+      <br></br>
 
-            <All propertys={propertys} setText={setText} />
-            <Color propertys={propertys} />
-            <br></br>
+      <All propertys={propertys} setText={setText} />
+      <Color propertys={propertys} />
+      <br></br>
 
-            <br></br>
-            <br></br>
-            <Clear propertys={propertys} setText={setText} />
+      <br></br>
+      <br></br>
+      <Clear propertys={propertys} setText={setText} />
 
-            <UnDo propertys={propertys} />
-        </>
-    );
+      <UnDo propertys={propertys} />
+    </>
+  );
 }
 
 export default App;

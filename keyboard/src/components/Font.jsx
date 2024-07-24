@@ -7,13 +7,13 @@ function Font({ propertys }) {
   }
 
   return (
-    <>
+    <section>
       {fonts.map((font, key) => (
         <button key={key} onClick={() => handleFont(font)}>
           {font}
         </button>
       ))}
-    </>
+    </section>
   );
 }
 

@@ -6,13 +6,13 @@ function Color({ propertys }) {
     propertys.push(newProprty);
   }
   return (
-    <div id="color">
+    <section id="color">
       {colors.map((color, key) => (
         <button key={key} onClick={() => handelClick(color)}>
           {color}
         </button>
       ))}
-    </div>
+    </section>
   );
 }
 export default Color;

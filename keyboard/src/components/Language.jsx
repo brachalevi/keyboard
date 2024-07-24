@@ -4,10 +4,10 @@ function Language(props) {
     props.onLanguageChange(selectedLanguage);
   }
   return (
-    <>
+    <section>
       <button onClick={() => handleLanguage(english)}>english</button>
       <button onClick={() => handleLanguage(hebrew)}>עברית </button>
-    </>
+    </section>
   );
 }
 
