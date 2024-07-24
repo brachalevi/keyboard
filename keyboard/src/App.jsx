@@ -13,109 +13,100 @@ import UnDo from "./components/UnDo.jsx";
 const propertys = [{ color: "black", fontSize: 18, fontFamily: "ariel" }];
 
 function App() {
-  const [text, setText] = useState([]);
+    const [text, setText] = useState([]);
 
-  const english = [
-    "q",
-    "w",
-    "e",
-    "r",
-    "t",
-    "y",
-    "u",
-    "i",
-    "o",
-    "p",
-    "a",
-    "s",
-    "d",
-    "f",
-    "g",
-    "h",
-    "j",
-    "k",
-    "l",
-    "z",
-    "x",
-    "c",
-    "v",
-    "b",
-    "n",
-    "m",
-    "   ",
-  ];
+    const english = [
+        "w",
+        "e",
+        "r",
+        "t",
+        "y",
+        "u",
+        "i",
+        "o",
+        "p",
+        "a",
+        "s",
+        "d",
+        "f",
+        "g",
+        "h",
+        "j",
+        "k",
+        "l",
+        "z",
+        "x",
+        "c",
+        "v",
+        "b",
+        "n",
+        "m",
+        "   ",
+    ];
 
-  const hebrew = [
-    "ק",
-    "ר",
-    "א",
-    "ט",
-    "ו",
-    "ן",
-    "ם",
-    "פ",
-    "ש",
-    "ד",
-    "ג",
-    "כ",
-    "ע",
-    "י",
-    "ח",
-    "ל",
-    "ך",
-    "ף",
-    "ז",
-    "ס",
-    "ב",
-    "ה",
-    "נ",
-    "מ",
-    "צ",
-    "ת",
-    "ץ",
-    "   ",
-  ];
+    const hebrew = [
+        "ק",
+        "ר",
+        "א",
+        "ט",
+        "ו",
+        "ן",
+        "ם",
+        "פ",
+        "ש",
+        "ד",
+        "ג",
+        "כ",
+        "ע",
+        "י",
+        "ח",
+        "ל",
+        "ך",
+        "ף",
+        "ז",
+        "ס",
+        "ב",
+        "ה",
+        "נ",
+        "מ",
+        "צ",
+        "ת",
+        "ץ",
+        "   ",
+    ];
 
-  const [language, setLanguage] = useState(english);
+    const [language, setLanguage] = useState(english);
 
-  function handleLanguage(selectedLanguage) {
-    setLanguage(selectedLanguage);
-  }
+    function handleLanguage(selectedLanguage) {
+        setLanguage(selectedLanguage);
+    }
 
-  return (
-    <>
-      <Screen text={text} />
-      <Keyboard
-        propertys={propertys}
-        setText={setText}
-        text={text}
-        language={language}
-      />
-      <Language
-        onLanguageChange={handleLanguage}
-        languages={{ english, hebrew }}
-      />
-      <br></br>
-      <br></br>
-      <Size propertys={propertys} />
-      <br></br>
+    return (
+        <>
+            <Screen text={text} />
+            <Keyboard propertys={propertys} setText={setText} text={text} language={language} />
+            <Language onLanguageChange={handleLanguage} languages={{ english, hebrew }} />
+            <br></br>
+            <br></br>
+            <Size propertys={propertys} />
+            <br></br>
 
-      <br></br>
-      <Font propertys={propertys} />
-      <br></br>
-      <br></br>
+            <br></br>
+            <Font propertys={propertys} />
+            <br></br>
+            <br></br>
 
-      <All propertys={propertys} setText={setText} />
-      <Color propertys={propertys} />
-      <br></br>
+            <All propertys={propertys} setText={setText} />
+            <Color propertys={propertys} />
+            <br></br>
 
-      <br></br>
-      <br></br>
-      <Clear propertys={propertys} setText={setText} />
+            <br></br>
+            <br></br>
+            <Clear propertys={propertys} setText={setText} />
 
-      <UnDo propertys={propertys} />
-    </>
-  );
+            <UnDo propertys={propertys} />
+        </>
+    );
 }
 
 export default App;
